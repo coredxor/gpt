@@ -11,6 +11,10 @@ app.get('/', async (req, res) => {
     res.send('Hello from codetea.io!');
 });
 
+app.get('/codetea', async (req, res) => {
+    res.send('Hello from codetea.io codetea!');
+});
+
 app.get('/api/hello', async (req, res) => {
     res.send('Hello from CodeTea.io!');
 });
