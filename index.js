@@ -7,6 +7,10 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+app.get('/api/hello', async (req, res) => {
+    res.send('Hello from CodeTea.io!');
+});
+
 app.post('/api/stream', async (req, res) => {
     try {
         console.log("BonX: start stream")
