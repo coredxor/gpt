@@ -7,6 +7,10 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+app.get('/', async (req, res) => {
+    res.send('Hello from codetea.io!');
+});
+
 app.get('/api/hello', async (req, res) => {
     res.send('Hello from CodeTea.io!');
 });
