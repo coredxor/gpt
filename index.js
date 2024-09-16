@@ -15,11 +15,11 @@ app.get('/codetea', async (req, res) => {
     res.send('Hello from codetea.io codetea!');
 });
 
-app.get('/api/hello', async (req, res) => {
+app.get('codetea/api/hello', async (req, res) => {
     res.send('Hello from CodeTea.io!');
 });
 
-app.post('/api/stream', async (req, res) => {
+app.post('/codetea/api/stream', async (req, res) => {
     try {
         console.log("BonX: start stream")
         const { messages, maxTokens, temperature = 0.3 } = req.body;
@@ -57,7 +57,7 @@ app.post('/api/stream', async (req, res) => {
     }
 });
 
-app.post('/api/gpt', async (req, res) => {
+app.post('codetea/api/gpt', async (req, res) => {
     try {
         console.log("BonX: ","dfdf")
         const { messages, maxTokens, temperature = 0.7 } = req.body;
